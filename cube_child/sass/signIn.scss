@@ -1,0 +1,72 @@
+$padding-base-background-first: 4% 30%;
+$padding-base-background-first-small: 2% 15%;
+$padding-base-background-second: 5%;;
+
+$background-first-color: #f7f7f7;
+$background-second-color: #fff;
+$brand-white: #fff;
+$brand-red: #D84C4D;
+
+$border-radius-base:  4px;
+$padding-base-vertical: 12px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Import 
+@import 'bootstrap/mixins';
+@import 'bootstrap/variables';
+
+
+body{
+	font-size: 13px;
+}
+#page {
+    padding: $padding-base-background-first;
+    background: $background-first-color;
+    @media screen and (max-width: $screen-xs) {
+    	padding: $padding-base-background-first-small;
+    }
+}
+.row-pb-sm {
+    padding-bottom: 1em !important;
+}
+
+.signin-container {
+    background-color: $background-second-color;
+    padding: $padding-base-background-second;
+    .logIn{
+    	color:$brand-red;
+    	margin-left: 2%;
+    }
+}
+.signIn-fram{
+	@include border-radius($border-radius-base);
+    border-radius: $border-radius-base;
+    padding: $padding-base-vertical 0;
+    a{
+    	color: $brand-white;
+    }
+    &.facebook{
+    	background-color: #3c5a95;
+    }
+    &.wechat{
+    	background-color: #19a598;
+    }
+    &.signUp{
+    	background-color: $brand-red;
+    }
+    &.format{
+    	border: solid 1px #777;
+    	.placeholder{
+    		margin-left: 3%;
+    	}
+    }
+}
+
+
+
