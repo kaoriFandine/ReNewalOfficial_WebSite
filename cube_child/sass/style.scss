@@ -6,7 +6,7 @@ $grid-gutter-width: 40px;
 $border-radius-base:  4px;
 $padding-base-vertical: 14px;
 
-$brand-primary: #D84C4D;
+$brand-primary: #CC202C;
 $brand-secondary: #118DF0; 
 $brand-special: #00ffa3;
 
@@ -177,6 +177,23 @@ h1, h2, h3, h4, h5, h6, figure {
 	padding-left: 15px;
 	padding-right: 15px;
 }
+.sign-up{
+	border: solid 1px $brand-primary;
+    @include border-radius(4px);
+    padding: 1% !important;
+    a{
+    	color: $brand-primary;
+    }
+}
+.get-app{
+	border: solid 1px #000;
+    @include border-radius(4px);
+    padding: 1% !important;
+    background-color: #000;
+    a{
+    	color: #fff !important;
+    }
+}
 
 .gtco-nav {
 	position: relative;
@@ -223,7 +240,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			a {
 				font-size: 16px;
 				padding: 30px 10px;
-				color: #3ac1bc;
+				color: #000;
 				@include transition(.5s);
 				&:hover,&:focus, &:active {
 					color: #33a3bd;
@@ -740,6 +757,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: $brand-primary;
 }
 .gtco-staff, .gtco-item { 
 	margin-bottom: 4em;
@@ -1123,7 +1141,7 @@ form {
 }
 
 //Overlay Promo Bana
-.info-panel--promo{
+#info-panel--promo{
 	text-align: center;
 	padding: 0 20px 0 20px;
     position: relative;
@@ -1132,7 +1150,7 @@ form {
     font-size: 17px;
     font-weight: 700;
     margin: auto 10px;
-    color: #000;
+    color: #fff;
     }
     .promo-terms {
     font-family: "GothamProLight",Arial,Helvetica,sans-serif;
@@ -1145,7 +1163,6 @@ form {
     border-radius: 100px;
     background-color: $brand-white;
     color: $brand-primary;
-    opacity: .77;
     margin: auto 10px;
     @media screen and (max-width: $screen-sm) {
   	display: inline-block;}
@@ -1165,6 +1182,9 @@ form {
     right: 20px;
     top: 10px;
 	}
+}
+.close{
+	display:none;
 }
 
 
